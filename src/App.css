@@ -7,3 +7,15 @@
 .text-white{
   color: #f3f3f3;
 }
+.room-container{
+  width: 100%;
+  margin-bottom: 150px;
+  background: lightgray;
+}
+.room-content{
+  position: relative;
+  float: left;
+}
+.topnav-right {
+  float: right;
+}

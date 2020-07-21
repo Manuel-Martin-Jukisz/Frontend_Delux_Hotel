@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
 import {createNewUser} from '../API';
 
 export default class Login extends Component {

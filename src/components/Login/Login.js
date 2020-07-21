@@ -22,7 +22,7 @@ export default class Login extends Component {
         const {username , password} = this.state;
         const userData = {username, password};
 
-        logInUser(userData);
+        logInUser(userData, this.props.setUser);
     }
 
     render() {
