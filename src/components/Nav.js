@@ -47,6 +47,11 @@ export default class Nav extends Component {
                         </Link>
                         </li>
                         <li className="active">
+                        <Link to='/myReservations'>
+                        <h3>My Reservations</h3>
+                        </Link>
+                        </li>
+                        <li className="active">
                         <Link to='/login' onClick={this.props.logOut}>
                         <h3>Logout</h3>
                         </Link>

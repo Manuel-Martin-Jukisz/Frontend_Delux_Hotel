@@ -14,6 +14,9 @@ export default class Login extends Component {
             [event.target.id]: event.target.value,
         });
     };
+    refreshPage = ()=>{
+        window.location.reload(false);
+      }
 
     handleSubmit = (event) => {
         event.preventDefault();

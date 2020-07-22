@@ -30,16 +30,16 @@ export default class Home extends Component {
         const date2 = this.state.endDate
 
         const timeDifference = date1.getTime() - date2.getTime()
-        console.log(timeDifference);
+        // console.log(timeDifference);
 
         const dayDifference = timeDifference  / (1000 * 3600 * 24)
-        console.log(dayDifference);
+        // console.log(dayDifference);
 
         const raundDayDifference = Math.round(dayDifference)
-        console.log(raundDayDifference);
+        // console.log(raundDayDifference);
 
         const actualDays = raundDayDifference - raundDayDifference - raundDayDifference
-        console.log(actualDays);
+        // console.log(actualDays);
 
         this.setState({
             stayDays: actualDays

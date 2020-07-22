@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup';
 import MyAccount from './components/MyAccount';
 import UpdateDetails from './components/UpdateDetails'
+import MyReservations from './components/MyReservations'
 import Error from './components/Error';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -74,6 +75,11 @@ function App() {
             setUser={setUser}
             />
           </Route>
+          <Route exact path="/myReservations">
+            <MyReservations
+            user={user}
+            />
+            </Route>
           <Route path='/signup' component={Signup}/>
           <Route component={Error}/>
           </Switch>
