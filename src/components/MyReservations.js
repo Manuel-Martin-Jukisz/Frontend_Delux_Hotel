@@ -13,38 +13,29 @@ export default class MyReservations extends Component {
         .then((res) => {
                     return res;
                 })
-        .then((data) =>data.filter(ticket => ticket.user_id === 1))
+        .then((data) =>data.filter(ticket => ticket.user_id === this.props.user.id))
         .then((data) => {
             this.setState({
                 myReservations: data
             })
         })
     }
-
-    // checkTicketsOwn = () => {
-    //     const array = []
-
-    //     for(let i = 0; i < this.state.myTickets.length; i++){
-    //         const eventId= this.this.state.myTickets[i].event_id
-    //         console.log(eventId);
-    //         array.push(eventId)
-    //     }
-    //     console.log(array);
-    //     return array
-    // }
-
+    
     render() {
         return (
-            <div className='text-align'>
-                <h2>
+            <div className=''>
+                <h2 className='text-align'>
                     This are your Reservations
                 </h2>
+                <div className="">
                 {this.state.myReservations.map((reservation) =>
                     <ReservationCard
                         key={reservation.id}
                         data={reservation}
+                        setUser={this.props.setUser}
                     />
                 )}
+                </div>
             </div>
         )
     }

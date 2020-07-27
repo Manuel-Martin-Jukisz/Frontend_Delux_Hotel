@@ -19,7 +19,7 @@ export const logInUser = (userData, setUser) => {
         .then(console.log)
 }
 
-export const createNewUser = (userData) => {
+export const createNewUser = (userData, setUser) => {
     fetch("http://localhost:3010/users", {
         method: "POST",
         headers: {
@@ -32,7 +32,12 @@ export const createNewUser = (userData) => {
         .then((res) => {
             localStorage.setItem("jwt", res.jwt);
             return res;
-        }).then((data) => console.log(data))
+        })
+        .then((res) => {
+            setUser(res.user)
+            return res;
+        })
+        .then(console.log)
         
         
 }
@@ -84,10 +89,11 @@ export const postReservation = (reservationData) => {
 export const userReservation = (userId) => { 
     fetch('http://localhost:3010/reservations')
     .then((data) => data.json())
-    .then((res) => {
-            return res;
-        })
     .then((data) =>data.filter(reservation => reservation.user_id === userId))
+    .then((res) => {
+        return res;
+    })
+
 }
 
 export const eventById = (id) => {
@@ -97,3 +103,10 @@ export const eventById = (id) => {
             return res;
         })
 } 
+
+export const fetchDeleteReservation = (id) => {
+    return fetch(`http://localhost:3010/reservations/${id}`, {
+        method: 'DELETE'
+    })
+    .then(res => res.json());
+};

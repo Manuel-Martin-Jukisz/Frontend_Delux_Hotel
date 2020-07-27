@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {fetchDeleteReservation} from '../API'
+import {userReservation} from '../API'
 
 export default class ReservationCard extends Component {
     state = {
@@ -23,14 +25,17 @@ export default class ReservationCard extends Component {
             })
         })
     }
+    handleDelete = () => {
+        fetchDeleteReservation(this.props.data.id)
+    }
     
     render() {
-        return (
-            <div>
+        return (   
+            <div className="col-sm-0 col-md-5 border margin-right text-align">
                 <h3>
-                    Room name{this.state.name}
+                    Room name: {this.state.name}
                 </h3>
-                <img src={this.state.img} width="5%" alt='Event Image' />
+                <img src={this.state.img} width="50%" alt='Event' />
                 <div>
                 <h4>
                 checkin date:{this.props.data.check_in}
@@ -38,6 +43,9 @@ export default class ReservationCard extends Component {
                 <h4>
                 checkout date:{this.props.data.check_out}
                 </h4>
+                <button className='btn btn-primary'onClick={this.handleDelete}>
+                    delete
+                </button>
                 </div>
             </div>
         )

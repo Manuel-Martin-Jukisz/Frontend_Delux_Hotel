@@ -1,21 +1,79 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 .text-align{
   text-align: center;
-}
-.nav{
-  background-color: #3b3b3b;
 }
 .text-white{
   color: #f3f3f3;
 }
 .room-container{
-  width: 100%;
-  margin-bottom: 150px;
-  background: lightgray;
+  align-content: center;
 }
 .room-content{
   position: relative;
   float: left;
 }
-.topnav-right {
-  float: right;
+.border{
+  border: 9px inset #1C6EA4;
+}
+.margin-right{
+  margin-right: 30px;
+}
+.container{
+  padding-left: 100px;
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+	background-image:url("https://www.strandpalacehotel.co.uk/wp-content/uploads/2019/11/Lobby-With-Opacity-1920x1257.jpg");
+	text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.banner-text{
+  padding:200px 0 150px 0;
+  align-content: center;
+}
+.banner-heading{
+  background-color: rgba(0,0,0,0.5) !important;
+	font-family: 'Lobster', cursive;
+	font-size: 75px;
+    font-weight: 700;
+    line-height: 100px;
+    margin-bottom: 30px;
+	color:#fff;
+}
+.banner-sub-heading{
+  background-color: rgba(0,0,0,0.5) !important;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 30px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+	color:#fff;
+}
+
+.btn-banner{
+	padding:5px 20px;
+	border-radius:10px;
+	font-weight:700;
+	line-height:1.5;
+	text-align:center;
+	color:#fff;
+	text-transform:uppercase;
+}
+.bar{
+  background: lightgrey;
+}
+.dateContainer{
+  margin: 19px;
 }

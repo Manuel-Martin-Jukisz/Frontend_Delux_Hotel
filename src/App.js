@@ -3,8 +3,9 @@ import './App.css';
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
 import {validateToken} from './API';
 
+import Home from './components/Home'
 import Nav from './components/Nav';
-import Home from './components/Home';
+import RoomType from './components/RoomType';
 import Login from './components/Login/Login';
 import Signup from './components/Signup';
 import MyAccount from './components/MyAccount';
@@ -20,7 +21,7 @@ function App() {
   const defaultUser = {
     id: 0,
     name: "",
-    username: "",
+    username: null,
     email: "",
   }
   const [user, setUser] = useState(defaultUser)
@@ -49,12 +50,16 @@ function App() {
     }
     
   return (
-    <div className="App">
       <Router>
-        <Nav logOut={logOut}/>
+        <Nav logOut={logOut} user={user}/>
         <Switch >
           <Route exact path="/">
             <Home
+            user={user}
+            />
+          </Route>
+          <Route exact path="/roomstype">
+            <RoomType
             user={user}
             />
           </Route>
@@ -75,16 +80,21 @@ function App() {
             setUser={setUser}
             />
           </Route>
+          <Route exact path="/signup">
+            <Signup
+            user={user}
+            setUser={setUser}
+            />
+          </Route>
           <Route exact path="/myReservations">
             <MyReservations
             user={user}
+            setUser={setUser}
             />
             </Route>
-          <Route path='/signup' component={Signup}/>
           <Route component={Error}/>
           </Switch>
       </Router>
-    </div>
   );
 } 
 

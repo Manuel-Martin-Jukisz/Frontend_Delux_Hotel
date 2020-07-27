@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import {logInUser} from '../../API';
+import { Redirect } from 'react-router-dom';
 
 export default class Login extends Component {
 
     state = {
         username: '',
-        password: ''
+        password: '',
     };
 
 
@@ -16,7 +17,7 @@ export default class Login extends Component {
     };
     refreshPage = ()=>{
         window.location.reload(false);
-      }
+    }
 
     handleSubmit = (event) => {
         event.preventDefault();
@@ -31,6 +32,8 @@ export default class Login extends Component {
     render() {
         return (
             <div className='text-align'>
+                {this.props.user.id != 0 ? <Redirect to="/roomstype"/> : null}
+                <h2>Login</h2>
                 <div className='Login'>
                     <form onSubmit={this.handleSubmit}>
                     <label>Username</label>

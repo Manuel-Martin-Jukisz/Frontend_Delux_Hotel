@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {createNewUser} from '../API';
+import { Redirect } from 'react-router-dom';
 
 export default class Login extends Component {
 
@@ -24,12 +25,13 @@ export default class Login extends Component {
         const {username , password, name, phone} = this.state;
         const userData = {username, password, name, phone};
 
-        createNewUser(userData);
+        createNewUser(userData, this.props.setUser);
     }
 
     render() {
         return (
             <div className='text-align'>
+                {this.props.user.id != 0 ? <Redirect to="/roomstype"/> : null}
                 <h2>Sign up</h2>
                 <div className='Login'>
                     <form onSubmit={this.handleSubmit}>
