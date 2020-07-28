@@ -27,8 +27,9 @@ function App() {
   const [user, setUser] = useState(defaultUser)
 
     useEffect(() => {
-      if (localStorage.getItem('jwt')) 
-      validateToken().then(user => handlePostAuth(user))
+      if (localStorage.getItem('jwt')){
+        validateToken().then(user => handlePostAuth(user))
+      }
     }, [])
 
 

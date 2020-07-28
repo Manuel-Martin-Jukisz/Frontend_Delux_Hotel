@@ -26,6 +26,7 @@ export default class Login extends Component {
         const userData = {username, password, name, phone};
 
         createNewUser(userData, this.props.setUser);
+        alert(`Welcome ${this.state.username}`)
     }
 
     render() {

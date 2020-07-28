@@ -5,6 +5,7 @@ export default class RoomCard extends Component {
 
     handleClick = () => {
         this.props.hundleBook(this.props.room.id)
+        alert(`Your Booking have been create`)
     }
 
 

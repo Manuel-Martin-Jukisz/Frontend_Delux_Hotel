@@ -3,6 +3,10 @@ import {Link} from 'react-router-dom';
 
 
 export default class Nav extends Component {
+    handleClick =() => {
+        this.props.logOut()
+        alert(`See You soon : ${this.props.user.username}`)
+    }
     render() {
         if(!this.props.user.username){
             return(
@@ -65,7 +69,7 @@ export default class Nav extends Component {
                                 </Link>
                                 </li>
                                 <li className="active">
-                                <Link to='/login' onClick={this.props.logOut}>
+                                <Link to='/login' onClick={this.handleClick}>
                                 <h3>Logout</h3>
                                 </Link>
                                 </li>

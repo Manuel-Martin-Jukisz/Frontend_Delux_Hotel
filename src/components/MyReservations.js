@@ -30,9 +30,10 @@ export default class MyReservations extends Component {
     render() {
         return (
             <div className=''>
-                <h2 className='text-align'>
+                {this.state.myReservations.length === 0 ? <h3 className='no-reser'>You have no reservations at the moment</h3> : <h2 className='text-align'>
                     This are your Reservations
-                </h2>
+                </h2>}
+                
                 <div className="">
                 {this.state.myReservations.map((reservation) =>
                     <ReservationCard

@@ -27,6 +27,7 @@ export default class Login extends Component {
         const userData = {username, password};
 
         logInUser(userData, this.props.setUser);
+        alert(`Welcome back ${this.state.username}`)
     }
 
     render() {

@@ -6,6 +6,10 @@ html, body {
   height: 100%;
   font-family: 'Numans', sans-serif;
 }
+.no-reser{
+  text-align: center;
+  font-size: xx-large;
+}
 .roomType{
   width: 100%;
   text-align: center;
