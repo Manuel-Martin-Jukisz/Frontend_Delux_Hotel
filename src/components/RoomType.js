@@ -71,8 +71,8 @@ export default class RoomType extends Component {
 
     render() {
         return (
-            <div className='text-align'>
-                <div className='dateContainer'>
+            <div className='roomType'>
+                <div className='dateContainer sticky'>
                     <form onSubmit={this.handleSubmit}>
                             
                             <label>Checkin Date: </label>
@@ -107,7 +107,7 @@ export default class RoomType extends Component {
                             </button>
                     </form>
                 </div>
-                <div className="container">
+                <div className="">
                 {this.state.rooms.map((room) => 
                 <RoomCard
                 key={room.id}

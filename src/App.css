@@ -1,8 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
+  font-family: 'Numans', sans-serif;
 }
+.roomType{
+  width: 100%;
+  text-align: center;
+}
+.room-container{
+  margin-left: 150px;
+  margin-bottom: 10px;
+  background-image: url('https://wallpapertag.com/wallpaper/full/9/2/e/394041-widescreen-dark-background-images-2560x1600-laptop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+}
+.cart{
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  right: 45%;
+  width: 200px;
+  height: 200px;
+}
+.card-header h3{
+  color: white;
+  }
+  
+  .social_icon{
+  position: absolute;
+  right: 20px;
+  top: -45px;
+  }
+  
+  .input-group-prepend span{
+  width: 50px;
+  background-color: #FFC312;
+  color: black;
+  border:0 !important;
+  }
+  
+  input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+  
+  }
+  
+  .remember{
+  color: white;
+  }
+  
+  .remember input
+  {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+  }
+  
+  .login_btn{
+  color: black;
+  background-color: #FFC312;
+  width: 100px;
+  }
+  
+  .login_btn:hover{
+  color: black;
+  background-color: white;
+  }
+  
+  .links{
+  color: white;
+  }
+  
+  .links a{
+  margin-left: 4px;
+  }
+  .container{
+    height: 100%;
+    align-content: center;
+    }
+  /* a///////////////// */
 .text-align{
   text-align: center;
 }
@@ -14,7 +96,6 @@ html, body {
 }
 .room-content{
   position: relative;
-  float: left;
 }
 .border{
   border: 9px inset #1C6EA4;
@@ -22,12 +103,15 @@ html, body {
 .margin-right{
   margin-right: 30px;
 }
+.margin-left{
+  margin-left: 10px;
+}
 .container{
   padding-left: 100px;
 }
 .banner{
   width: 100%;
-  height: 100vh;
+  height: 89.5vh;
 	background-image:url("https://www.strandpalacehotel.co.uk/wp-content/uploads/2019/11/Lobby-With-Opacity-1920x1257.jpg");
 	text-align: center;
     color: #fff;
@@ -72,8 +156,24 @@ html, body {
 	text-transform:uppercase;
 }
 .bar{
-  background: lightgrey;
+  background: #333538;
 }
 .dateContainer{
   margin: 19px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.navColorh3{
+  color: #f3f3f3;
+}
+.navColorh3:hover{
+  color: black;
+}
+.background{
+  width: 100%;
+  height: 89.5vh;
+  background-image: url('https://wallpapertag.com/wallpaper/full/9/2/e/394041-widescreen-dark-background-images-2560x1600-laptop.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

@@ -21,6 +21,12 @@ export default class MyReservations extends Component {
         })
     }
     
+    filterRooms = (id) => {
+        const data=this.state.myReservations.filter(room => room.id !== id)
+        this.setState({
+            myReservations: data
+        })
+    }
     render() {
         return (
             <div className=''>
@@ -32,6 +38,7 @@ export default class MyReservations extends Component {
                     <ReservationCard
                         key={reservation.id}
                         data={reservation}
+                        filterRooms={this.filterRooms}
                         setUser={this.props.setUser}
                     />
                 )}

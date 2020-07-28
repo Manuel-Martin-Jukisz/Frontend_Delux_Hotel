@@ -25,9 +25,11 @@ export default class RoomCard extends Component {
                         </button>
                         </Link>
                         :
+                        <Link to='/myReservations'>
                         <button onClick={this.handleClick}>
                             Book
                         </button>
+                        </Link>
                         }
                     </div>
             </div>

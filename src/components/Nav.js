@@ -10,10 +10,10 @@ export default class Nav extends Component {
                 <nav className="bar">
                         <div className="container-fluid">
                             <div className="navbar-header">
-                            <ul className="nav navbar-nav">
+                            <ul className="nav navbar-nav navColorh3">
                                 <li className="active">
                                 <Link to='/'>
-                                    <h3>Home</h3>
+                                    <h3 className="">Home</h3>
                                 </Link>
                                 </li>
                                 <li className="active">

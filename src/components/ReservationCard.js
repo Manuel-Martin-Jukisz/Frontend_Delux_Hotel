@@ -27,6 +27,7 @@ export default class ReservationCard extends Component {
     }
     handleDelete = () => {
         fetchDeleteReservation(this.props.data.id)
+        this.props.filterRooms(this.props.data.id)
     }
     
     render() {
