@@ -18,16 +18,16 @@ export default class RoomCard extends Component {
                     </div>
                     <div className='room-content'>
                         <h4>{this.props.room.description}</h4>
-                        <h2>Price: £{this.props.room.price * this.props.stayDays}</h2>
+                        <h2>Price: £{this.props.stayDays === 0 ? this.props.room.price : this.props.room.price * this.props.stayDays}</h2>
                         {this.props.user.username === null ? 
                         <Link to='/login'>
-                        <button>
+                        <button className='btn btn-info'>
                             You must be login to book
                         </button>
                         </Link>
                         :
                         <Link to='/myReservations'>
-                        <button onClick={this.handleClick}>
+                        <button onClick={this.handleClick} className='btn btn-success'>
                             Book
                         </button>
                         </Link>

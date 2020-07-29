@@ -20,8 +20,7 @@ export default class RoomType extends Component {
         fetch('http://localhost:3010/rooms')
         .then((resp) => resp.json())
         .then((rooms) => this.setState({
-            allRooms: rooms,
-            rooms: rooms
+            allRooms: rooms
         }))
     }
 
@@ -52,14 +51,7 @@ export default class RoomType extends Component {
         });
     };
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        this.setStayDays()
-        // const filter = this.state.rooms.map(room => room.max_guest <= this.state.stayDays)
-        // this.setState({
-        //     rooms: filter
-        // })
-    }
+   
 
     hundleBook = (roomID) => {
         const reservationData = {
@@ -72,6 +64,17 @@ export default class RoomType extends Component {
         console.log(reservationData);
 
         postReservation(reservationData)
+    }
+    renderRoomsFiltered = (guest) => {
+        const data = this.state.allRooms.filter(room => room.max_guest >= guest)
+        this.setState({
+            rooms: data
+        })
+    }
+    handleSubmit = (event) => {
+        event.preventDefault();
+        this.setStayDays();
+        this.renderRoomsFiltered(this.state.guests)
     }
 
     render() {
@@ -113,7 +116,15 @@ export default class RoomType extends Component {
                     </form>
                 </div>
                 <div className="">
-                {this.state.rooms.map((room) => 
+                    {this.state.rooms.length === 0 ? this.state.allRooms.map((room) => 
+                <RoomCard
+                key={room.id}
+                room={room}
+                stayDays={this.state.stayDays}
+                hundleBook={this.hundleBook}
+                user={this.props.user}
+                />
+                ): this.state.rooms.map((room) => 
                 <RoomCard
                 key={room.id}
                 room={room}

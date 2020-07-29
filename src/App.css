@@ -114,6 +114,8 @@ html, body {
 }
 .margin-right{
   margin-right: 30px;
+  margin-top: 10px;
+  margin-left: 500px;
 }
 .margin-left{
   margin-left: 10px;

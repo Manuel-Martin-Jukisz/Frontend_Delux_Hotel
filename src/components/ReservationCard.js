@@ -44,7 +44,7 @@ export default class ReservationCard extends Component {
                 <h4>
                 checkout date:{this.props.data.check_out}
                 </h4>
-                <button className='btn btn-primary'onClick={this.handleDelete}>
+                <button className='btn btn-danger' onClick={this.handleDelete}>
                     delete
                 </button>
                 </div>

@@ -14,7 +14,7 @@ export default class Home extends Component {
                             Book your stay in the heart of London today
                         </div>
                         <Link to='roomstype'>
-                            <button className="">
+                            <button className="btn btn-success">
                                 Book Now
                             </button>
                         </Link>
