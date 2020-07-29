@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom';
 
 export default class Home extends Component {
     render() {
@@ -12,6 +13,11 @@ export default class Home extends Component {
                         <div className="banner-sub-heading">
                             Book your stay in the heart of London today
                         </div>
+                        <Link to='roomstype'>
+                            <button className="">
+                                Book Now
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

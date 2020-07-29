@@ -8,6 +8,7 @@ import {postReservation} from '../API'
 export default class RoomType extends Component {
 
     state = {
+        allRooms: [],
         rooms: [],
         startDate: new Date(),
         endDate: new Date(),
@@ -19,8 +20,8 @@ export default class RoomType extends Component {
         fetch('http://localhost:3010/rooms')
         .then((resp) => resp.json())
         .then((rooms) => this.setState({
-            rooms: rooms,
-            room: rooms[0]
+            allRooms: rooms,
+            rooms: rooms
         }))
     }
 
@@ -54,6 +55,10 @@ export default class RoomType extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.setStayDays()
+        // const filter = this.state.rooms.map(room => room.max_guest <= this.state.stayDays)
+        // this.setState({
+        //     rooms: filter
+        // })
     }
 
     hundleBook = (roomID) => {
